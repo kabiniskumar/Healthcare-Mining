@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            function UpdateStatus(){
+                let request = new XMLHttpRequest();
+                request.open("GET", "http://localhost:8888/start");
+                request.send();
+                request.onload = () => {
+                    console.log(request);
+                    if(request.status == 200) {
+                        console.log(request.response);
+                    }
+                    else {
+                        console.log("error");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+        <form action="/search" method="post" name="search">
+          <label for="firstSymptom">First Symptom:</label><br>
+          <input type="text" id="firstSymptom" name="firstSymptom"><br>
+
+            <label for="secondSymptom">Second Symptom:</label><br>
+            <input type="text" id="secondSymptom" name="secondSymptom"><br>
+
+            <label for="thirdSymptom">Third Symptom:</label><br>
+            <input type="text" id="thirdSymptom" name="thirdSymptom"><br>
+
+            <input type='submit' value='Find Disease' />
+        </form>
+
+    </body>
+
+</html>
+

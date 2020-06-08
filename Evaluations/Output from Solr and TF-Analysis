@@ -1,0 +1,53 @@
+Output from Solr and TF-Analysis
+--------------------------------
+
+
+Query: ["Coughing", "Fever", "Headache"]
+
+Solr: Pharyngitis, Common Cold, Influenza, Sinusitis, 
+TF Analysis: Sinusitis, Pharyngitis, Common Cold, Migraine Disorders, Asthma
+
+Query: ["Wheezing", "Coughing", "Chest tightness"]
+
+Solr: Asthma, Bronchitis, Pneumonia, Bronchiectasis, Sinusitis
+TF Analysis: Asthma, Common Cold, Pharyngitis, Influenza, Bronchitis
+
+Query: ["Pelvic Pain", "Fatigue", "Abdominal bloating"]
+
+Solr: Appendicitis, Irritable Bowel Syndrome, Urinary Tract Infection, Endometriosis, Hypertensive disease
+TF Analysis: Irritable Bowel Syndrome, Urinary Tract Infection, Fibromyalgia, Migraine Disorders, Influenza
+
+Query: ["Rhinorrhea", "Diarrhea", "Coughing"]
+
+Solr: Influenza, Common Cold, Sinusitis, Bronchitis, Asthma
+TF Analysis: Common Cold, Pharyngitis, Irritable Bowel Syndrome, Influenza, Pneumonia
+
+Query: ["Seizures", "Constipation", "Back Pain"]
+
+Solr: Meningitis, Hypoglecima, Epilepsy, Decompression Sickness, Fibromyalgia
+TF Analysis: Irritable Bowel Syndrome, Epilepsy, Migraine Disorders, Hypertensive disease, Influenza
+
+Query: ["Neuralgia", "Headache","Abdominal bloating"]
+
+Solr: Influenza, Stroke, Migraine Disorders, Sinusitis, Irritable Bowel Syndrome
+TF Analysis: Migraine Disorders, Sinusitis, Hypertensive disease, Tinnitus, Influenza
+
+Query: ["Dyspnea", "Tremor", "Weakness"]
+
+Solr: Migraine Disorders, Asthma, Hypertensive disease, Upper Respiratory Infections, Influenza
+TF Analysis: Myocardial Infarction, Pneumocystis jiroveci pneumonia, Migraine Disorders, Asthma, Cerebrovascular accident
+
+Query: ["Sore skin", "Flushing", "Pain"]
+
+Solr: Appendicitis, Skin Ulcer, Fibromyalgia, Migraine Disorders, Irritable Bowel Syndrome
+TF Analysis: Arthritis, Fibromyalgia, Irritable Bowel Syndrome, Sexually Transmitted Diseases
+
+Query: ["Abdominal Cramps", "Pain", "Spasm"]
+
+Solr: Appendicitis, Irritable Bowel Syndrome, Ovarian Cysts, Arthritis, Fibromyalgia
+TF Analysis: Irritable Bowel Syndrome, Fibromyalgia, Decompression Sickness, Arthritis, Migraine Disorders
+
+Query: ["Upset stomach", "Edema", "Nausea"]
+
+Solr: Influenza, Irritable Bowel Syndrome, Arthritis, Common Cold, Lactose Intolerance
+TF Analysis: Irritable Bowel Syndrome, Common Cold, Gastroesophageal reflux disease, Migraine Disorders, Influenza

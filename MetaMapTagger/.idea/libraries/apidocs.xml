@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="apidocs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections4-4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-csv-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-text-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/metamap-api-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.47.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/prologbeans.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib/apidocs" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections4-4.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.8.1-javadoc.jar!/" />
+      <root url="file://$PROJECT_DIR$/dist/javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/src" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections4-4.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-csv-1.6-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.8.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-text-1.6-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib/MetaMapSrc/src/main/java" />
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

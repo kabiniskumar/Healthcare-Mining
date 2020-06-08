@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Healthcare Mining</title>
+    <style>
+      .navbar-header {
+          float: left;
+          padding: 15px;
+          text-align: center;
+          width: 100%;
+      }
+      .navbar-brand {float:none;}
+
+      .card {width:68rem!important;
+              margin-top: 1rem;
+      }
+
+      .card-body {text-align:left !important;}
+
+      .ul {list-style: none !important;}
+      .li {list-style: none !important;}
+
+      .my-li{list-style: none !important;
+              padding: 0; }
+
+      .disease{ margin-top: 1rem;
+                text-align: left !important;
+                font-weight: bolder !important;
+                color: #344feb;}
+
+    </style>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="navbar-header">
+            <p class="navbar-brand" id ="top3" >Related Conditions & their Discussion Threads</p>
+        </div>
+    </nav>
+     <div class ="container">
+    <div class ="row">
+        <div class ="col-lg-12 text-center" >
+        <div id ="top3">
+        </div>
+    <div id = 'test' >
+        <ul id="myList" class="list-g">
+        </ul>
+    </div>
+        </div>
+</div>
+  </div>
+    <br>
+<script>
+        console.log({{list|tojson}})
+        var x = {{list|tojson}}
+        console.log(x)
+        <!--x.forEach(myfunction);-->
+
+        function myfunction(item)
+        {
+          var node = document.createElement("LI");
+          var lin = document.createElement("A");
+          var textnode = document.createTextNode(item);
+          lin.href = item
+          lin.appendChild(textnode);
+          node.appendChild(lin);
+          node.classList.add("list-group-item");
+          return node;
+          <!--document.getElementById(str).appendChild(node);-->
+        }
+
+        <!--console.log({{list2|tojson}})-->
+        var y = {{list2|tojson}}
+        console.log(y)
+        y.forEach(thrds);
+
+        function createCards(link, heading, content){
+            var li1 = document.createElement("li");
+            li1.className = "my-li";
+
+            var div_card = document.createElement("div");
+            div_card.className ="card";
+
+
+            var div__card_body = document.createElement("div");
+            div__card_body.className ="card-body";
+            var h5_el = document.createElement("h5");
+            h5_el.className = "card-title";
+            h5_el.textContent = heading;
+            var p = document.createElement("p");
+            var a = document.createElement("a");
+            a.href = link;
+            a.appendChild(document.createTextNode("More"));
+
+            if (content.length > 550) {
+              content = content.substr(0,550) + '...';
+          }
+
+
+          p.textContent = content;
+          p.className ="demo-1";
+
+          div__card_body.appendChild(h5_el);
+          div__card_body.appendChild(p);
+          div__card_body.appendChild(a);
+          div_card.appendChild(div__card_body);
+          // d_div.appendChild(div_card);
+
+          li1.appendChild(div_card);
+          return li1;
+         };
+
+       function createList(parent, array) {
+            array.forEach(function (o) {
+            var node = document.createElement("LI");
+            node.className = "my-li";
+
+            var disease = document.createElement("h4");
+            disease.className = "disease";
+            disease.textContent = "Discussion threads related to " + o.Disease;
+            node.appendChild(disease);
+            parent.appendChild(node);
+
+
+            var thread_ul = document.createElement("ul");
+            thread_ul.className = "my-li";
+            node.appendChild(thread_ul);
+
+            if(o.link){
+                var link = o.link;
+                var heading = o.heading;
+                var content = o.content;
+
+                for(var i=0;i<link.length;i++){
+                    thread_ul.appendChild(createCards(link[i], heading[i], content[i]));
+                }
+             }
+         });
+        }
+
+        function dispDisease(item){
+            var div = document.getElementById("top3");
+            var p = document.createElement("p");
+            var str = " ";
+            for(var i=0; i<item.length; i++){
+              disease = item[i].Disease;
+              str = str + disease + ", "
+            }
+            str = str.substr(0, str.length-2);
+            p.textContent = "The Top 3 diseases are : " + str;
+            div.appendChild(p);
+
+        }
+
+        dispDisease(y);
+        var ulElem = document.querySelector("ul");
+        ulElem.classList.add("list-g");
+        createList(ulElem, y);
+        function thrds(item)
+        {
+          <!--console.log(item.Disease)-->
+          <!--console.log(item.ThreadLinks)-->
+
+
+        }
+
+</script>
+</body>
+
+</html>

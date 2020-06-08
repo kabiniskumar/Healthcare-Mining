@@ -1,0 +1,41 @@
+Ground Truth
+------------
+
+Symptoms: Cough, Fever, Headache
+Diseases: Influenza(Flu), Pneumonia, Common Cold, Asthma, Acute Sinsitis
+
+
+Symptoms: Wheezing, Cough, Chest Tightness
+Diseases: Asthma, Bronchitis, Aspiration Pneumonia, Influenza(Flu), Acute Sinsitis
+
+
+Symptoms: Pelvic pain, Fatigue, Abdominal Bloating
+Diseases: Endometriosis, Irritable Bowel Syndrome, Appendicitis, Urinary Tract Infection, Autoimmune diseases
+
+
+Symptoms: Rhinorrhea, Diarrhea, Cough
+Diseases: Influenza(Flu), Common Cold, Chronic Sinusitis, Pharyngitis, Swine Influenza
+
+
+Symptoms: Seizure, Constipation, Back pain
+Diseases: Low Blood Sugar(Hypoglycemia), Lupus, Meningitis, Epilepsy, Hypothyroidism
+
+
+Symptoms: Neuralgia, Headache, Abdominal Bloating
+Diseases: Acute Sinusitis, Influenza, Migraine Headache, Stroke, Cerebellar Hemorrhage
+
+
+Symptoms: Dyspnea, Tremor, Weakness
+Diseases: Asthma, Migraine disorders, Hyperthyroidism, Progeria, Osteogenesis Imperfecta
+
+
+Symptoms: Sore skin, Facial flushing, stomach pain
+Diseases: Fibromyalgia, Appendicitis, Arthritis, Skin Ulcer, Intestinal Obstruction
+
+
+Symptoms: Abdominal Cramps, Pain, Spasm
+Diseases: Appendicitis, Acute Cholecystitis, Peptic Ulcer, Irritable Bowel Syndrome, Endometriosis
+
+
+Symptoms: Upset Stomach, Edema, Nausea
+Diseases: Viral Gastroenteritis, Common Cold, Irritable Bowel Syndrome, Lactose Intolerance, Influenza(Flu)
