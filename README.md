@@ -1,4 +1,4 @@
-# HCM
+# Healthcare Mining
 
 1. We will use Docker to run an instance of Solr. Install docker from https://www.docker.com/products/docker-desktop.
 
